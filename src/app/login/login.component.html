@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Please Login to Begin</title>
+  </head>
+
+  <div class="jumbotron">
+    <div class="container-fluid">
+      <h3>Please Login to Begin</h3>
+      <br>
+      <br>
+      <form  [formGroup]="loginForm" (ngSubmit)="onSubmit()" ngNativeValidate>
+        <div class="form-group">
+            <label for="UserName">Username</label>
+            <input type="text" formControlName="UserName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.UserName.errors }" required/>
+            <div *ngIf="submitted && f.UserName.errors" class="invalid-feedback">
+                <div *ngIf="f.UserName.errors.required">Username is required</div>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="Password" >Password</label>
+            <input type="Password" formControlName="Password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Password.errors }" required/>
+            <div *ngIf="submitted && f.Password.errors" class="invalid-feedback">
+                <div *ngIf="f.Password.errors.required">Password is required</div>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <button [disabled]="loading" class="btn btn-primary">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                Continue
+            </button>
+            <!-- <button  class="btn btn-primary" a routerLink="/register">Sign up
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            </button> -->
+        </div>
+      </form>
+    </div>  
+  </div> 
+</html>

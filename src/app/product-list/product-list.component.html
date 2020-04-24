@@ -1,0 +1,15 @@
+<div class="product-list">
+
+  <h3> Types of Products </h3>
+  <br>
+  <div *ngFor="let product of products; index as productId">
+    <h3> {{ product.name }} </h3>
+    <p *ngIf="product.description"> Description: {{ product.description }} </p>
+    <button class="btn btn-primary" a [title]="product.name + ' details'" [routerLink]="['/products', productId]"> View all  {{ product.name }} products
+      <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+    </button>
+  </div>
+
+</div> 
+
+

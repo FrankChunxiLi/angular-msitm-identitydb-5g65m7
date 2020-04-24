@@ -1,0 +1,42 @@
+<div class="h-crud">
+  <h2>Add Hardware Products</h2>
+  <form [formGroup]="HProdForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+          <label for="Product_Name">Product Name</label>
+          <input type="text" formControlName="Product_Name" class="form-control" />
+      </div>
+      <div class="form-group">
+          <label for="Long_Description">Short Description</label>
+          <input type="text" formControlName="Short_Description" class="form-control" />
+      </div>
+      <div class="form-group">
+          <label for="Long_Description">Long Description</label>
+          <input type="text" formControlName="Long_Description" class="form-control" />
+      </div>
+      <div class="form-group">
+          <label for="SKU">SKU</label>
+          <input type="SKU" formControlName="SKU" class="form-control" />
+      </div>
+      <div class="form-group">
+          <label for="Tax_Category">Tax Category</label>
+          <input type="text" formControlName="Tax_Category" class="form-control" />
+      </div>
+      <div class="form-group">
+          <label for="Gift_Wrappable">Gift Wrappable</label>
+          <select formControlName="Gift_Wrappable">
+            <option value=1>True</option>
+            <option value=0>False</option>
+          </select>
+      </div>
+      <br>
+      <div class="form-group">
+          <label for="Image_URL">Image</label>
+          <input type="text" formControlName="Image_URL" class="form-control" />
+      </div>
+      <div class="form-group">
+          <button [disabled]="loading" class="btn btn-primary">Register</button>
+          <img *ngIf="loading" class="pl-3" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+          <button routerLink="/products" class="btn btn-link">Cancel</button>
+      </div>
+  </form>
+</div>  

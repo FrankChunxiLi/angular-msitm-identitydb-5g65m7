@@ -1,0 +1,68 @@
+<div class="flex-box">
+    <button [routerLink]="['/products/0']"> Back </button>
+</div>
+
+<div class="Table"  *ngFor="let HProduct of HProducts; let i = index" >
+  <div class="Title">
+        <p>Product Details</p>
+  </div>
+  <div class="Heading">
+    <div class="Cell">
+      <p>Product ID</p>
+    </div>
+    <div class="Cell">
+      <p>Product Name</p>
+    </div>
+    <div class="Cell">
+      <p>Short Description</p>
+    </div>
+    <div class="Cell">
+      <p>Long Description</p>
+    </div>
+    <div class="Cell">
+      <p>SKU</p>
+    </div>
+    <div class="Cell">
+      <p>Tax_Category</p>
+    </div>
+    <div class="Cell">
+      <p>Gift_Wrappable</p>
+    </div>
+    <div class="Cell">
+      <p>Image_URL</p>
+    </div>
+    <div class="Cell">
+      <p>Image</p>
+    </div>
+  </div>
+
+  <div class="Row">
+    <div class="Cell">
+      <p>{{HProduct.HardwareID}}</p>
+    </div>
+    <div class="Cell">
+      <p>{{HProduct.Product_Name}}</p>
+    </div>
+    <div class="Cell">
+      <p>{{HProduct.Short_Description}}</p>
+    </div>
+    <div class="Cell">
+      <p>{{HProduct.Long_Description}}</p>
+    </div>
+    <div class="Cell">
+      <p>{{HProduct.SKU}}</p>
+    </div>
+    <div class="Cell">
+      <p>{{HProduct.Tax_Category}}</p>
+    </div>
+    <div class="Cell">
+      <p>{{HProduct.Gift_Wrappable}}</p>
+    </div>
+    <div class="Cell">
+      <p>{{HProduct.Image_URL}}</p>
+    </div>
+    <div class="Cell">
+      <img src={{HProduct.Image_URL}} style="width:100px;height:75px;"/>
+    </div>
+  </div>
+</div>

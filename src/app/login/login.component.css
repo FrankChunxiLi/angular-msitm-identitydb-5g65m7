@@ -1,0 +1,18 @@
+/* space in the middle of the button */
+button {
+  margin:5px
+}
+
+.jumbotron {
+		text-shadow: #FFF 0 1px 1px;
+		color: #FFF;
+		position: relative;
+    width: 60vh;
+		height: 40vh;
+    font-family: Lato;
+	}
+
+.jumbotron .container-fluid {
+		position: relative;
+		z-index: 2;
+	}

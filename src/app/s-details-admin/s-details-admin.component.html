@@ -1,0 +1,76 @@
+<div class="flex-box">
+    <button [routerLink]="['/products/admin/1']"> Back </button>
+</div>
+
+<div class="Table"  *ngFor="let SProduct of SProducts; let i = index" >
+  <div class="Title">
+        <p>Product Details</p>
+  </div>
+  <div class="Heading">
+    <div class="Cell">
+      <p>Product ID</p>
+    </div>
+    <div class="Cell">
+      <p>Product Name</p>
+    </div>
+    <div class="Cell">
+      <p>Short Description</p>
+    </div>
+    <div class="Cell">
+      <p>Long Description</p>
+    </div>
+    <div class="Cell">
+      <p>SKU</p>
+    </div>
+    <div class="Cell">
+      <p>Tax_Category</p>
+    </div>
+    <div class="Cell">
+      <p>Gift_Wrappable</p>
+    </div>
+    <div class="Cell">
+      <p>Image_URL</p>
+    </div>
+    <div class="Cell">
+      <p>Image</p>
+    </div>
+    <div class="Cell">
+      <p>Delete Product</p>
+    </div>
+  </div>
+
+  <div class="Row">
+    <div class="Cell">
+      <p>{{SProduct.SoftwareID}}</p>
+    </div>
+    <div class="Cell">
+      <p>{{SProduct.Product_Name}}</p>
+    </div>
+    <div class="Cell">
+      <p>{{SProduct.Short_Description}}</p>
+    </div>
+    <div class="Cell">
+      <p>{{SProduct.Long_Description}}</p>
+    </div>
+    <div class="Cell">
+      <p>{{SProduct.SKU}}</p>
+    </div>
+    <div class="Cell">
+      <p>{{SProduct.Tax_Category}}</p>
+    </div>
+    <div class="Cell">
+      <p>{{SProduct.Gift_Wrappable}}</p>
+    </div>
+    <div class="Cell">
+      <p>{{SProduct.Image_URL}}</p>
+    </div>
+
+    <div class="Cell">
+      <img src={{SProduct.Image_URL}} style="width:100px;height:75px;"/>
+    </div>
+    <div class="Cell">
+      <button (click)="delSProd(SProduct.SoftwareID)" [routerLink]="['/products/admin/1']" class="btn btn-default form-control increaseBtn">Delete</button>
+  </div>
+
+  </div>
+</div>

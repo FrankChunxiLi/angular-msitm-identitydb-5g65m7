@@ -1,0 +1,40 @@
+<div class="tableWrapper" >
+
+  <div class="flex-box">
+    <button [routerLink]="['/products/admin']"> Back </button>
+  </div>
+
+  <div class="search-hero">
+    <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;Type a Product Name">
+  </div>
+
+  <table class="tableWrapper">
+    <thead>
+      <tr>
+        <th>ProductID</th>
+        <th>Product Name</th>
+        <th>Short Description</th>
+        <th>Product Details </th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let HProduct of HProducts | filter:searchText">
+      <td class="pointer" (click)="sort('HardwareID')">{{HProduct.HardwareID}}</td>
+      <td class="pointer" (click)="sort('Product_Name')" >{{HProduct.Product_Name}}</td>
+      <td class="pointer" (click)="sort('Short_Description')">{{HProduct.Short_Description}}</td>
+      <td> <button (click)="editHProduct(i)" [routerLink]="['/hProd/admin', HProduct.HardwareID]" > Details </button> </td>
+    </tr>
+  </tbody>
+ </table>
+
+  <div>
+      <button  (click)="decCount()" (click) = "this.getData(this.pager.toString())" class="btn btn-default form-control increaseBtn">Previous</button>
+      <button  (click)="pagebutton1()" (click) = "this.getData(this.pager.toString())" class="btn btn-default form-control increaseBtn">{{this.pagenumber}}
+        </button>
+      <button  (click)="pagebutton2()" (click) = "this.getData(this.pager.toString())" class="btn btn-default form-control increaseBtn">{{this.pagenumber+1}}</button>
+      <button  (click)="pagebutton3()" (click) = "this.getData(this.pager.toString())" class="btn btn-default form-control increaseBtn">{{this.pagenumber+2}}</button>
+      <button  (click)="incCount()" (click) = "this.getData(this.pager.toString())"  class="btn btn-default form-control increaseBtn">Next</button>
+      <h5>The current page is {{this.pager+1}}</h5>
+  </div>
+
+</div>

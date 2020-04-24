@@ -1,0 +1,255 @@
+.containerTitle {
+  display:flex;
+  margin-top:20px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.AddEmployeeTitleContainer {
+  display:flex;
+}
+
+.one {
+  flex:1;
+  padding:10px;
+}
+
+.addEmployeeBtnContainer {
+  flex:1;
+  background:#f6f6f6;
+  border-top-right-radius:10px;
+  border-bottom-right-radius:10px;
+}
+
+.tableWrapper {
+  margin-top:20px;
+  padding:20px;
+  background:#f6f6f6;
+}
+
+.addNewEmployeeBtn {
+  width:30px;
+  height:30px;
+  text-align:center;
+  line-height:28px;
+  color:#ffffff;
+  border-radius:5px;
+  background:green;
+  margin-top:18px;
+  cursor:pointer;
+  margin-bottom:20px;
+}
+
+.addEmployeeTitleContainer {
+  /* flex:1; */
+  /* background:red; */
+  background:#f6f6f6;
+  padding:20px 20px 0px 20px;
+  font-size:22px;
+  font-weight:bold;
+  font-style:italic;
+  border-top-left-radius:10px;
+  border-bottom-left-radius:10px;
+}
+
+.editEmployeeTitleContainer {
+  background:#f6f6f6;
+  padding:20px 20px 0px 20px;
+  font-size:22px;
+  font-weight:bold;
+  font-style:italic;
+  border-top-left-radius:10px;
+}
+
+/* button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+} */
+
+.flex-box {
+  padding: 5px;
+  display:flex;
+  justify-content: flex-end;
+}
+
+.oneTitle {
+  flex:1;
+  padding:10px;
+  background:#444444;
+  color:#ffffff;
+}
+
+.name {
+  padding:0px 15px 15px 20px;
+  background:#f6f6f6;
+}
+
+.position {  
+  background:#f6f6f6;
+  padding:0px 15px 15px 20px;
+}
+
+.inputPosition {
+}
+
+.input {
+  border:none;
+  height:32px;
+  padding-left:10px;
+  width:60%;
+  border-radius:5px;
+}
+
+.positionInput {
+  border:none;
+  height:32px;
+  padding-left:10px;
+  width:60%;
+  border-radius:5px;
+}
+
+.saveBtn {
+  background:green;
+  color:#ffffff;
+  border:none;
+  width:70px;
+  height:32px;
+  cursor:pointer;
+  border-radius:3px;
+}
+
+::placeholder {
+  /* padding-left:10px; */
+}
+
+.submitBtnContainer {
+  background:#f6f6f6;
+  padding:0px 0px 20px 20px;
+}
+
+.two {
+  flex:1;
+  padding:10px;
+}
+
+.twoTitle {
+  flex:1;
+  padding:10px;
+  background:#444444;
+  color:#ffffff;
+}
+
+.three {
+  flex:1;
+  padding:10px;
+}
+
+.threeTitle {
+  flex:1;
+  padding:10px;
+  background:#444444;
+  color:#ffffff;
+}
+
+.four {
+  flex:1;
+  padding:10px;
+}
+
+.fourTitle {
+  flex:1;
+  padding:10px;
+  background:#444444;
+  color:#ffffff;
+}
+
+.five {
+  flex:1;
+  padding:10px;
+}
+
+.fiveTitle {
+  flex:1;
+  padding:10px;
+  background:#444444;
+  color:#ffffff;
+}
+
+.six {
+  flex:1;
+  padding:10px;
+}
+
+.sixTitle {
+  flex:1;
+  padding:10px;
+  background:#444444;
+  color:#ffffff;
+}
+
+.seven {
+  flex:1;
+  padding:10px;
+}
+
+.sevenTitle {
+  flex:1;
+  padding:10px;
+  background:#444444;
+  color:#ffffff;
+}
+
+.eight {
+  flex:1;
+  padding:10px;
+}
+
+.eightTitle {
+  flex:1;
+  padding:10px;
+  background:#444444;
+  color:#ffffff;
+}
+
+
+
+.containerListItems {
+  display:flex;
+}
+
+    .Table
+    {
+        display: table;
+       
+    }
+    .Title
+    {
+        display: table-caption;
+        text-align: center;
+        font-weight: bold;
+        font-size: larger;
+    }
+    .Heading
+    {
+        display: table-row;
+        font-weight: bold;
+        text-align: center;
+    }
+    .Row
+    {
+        display: table-row;
+        text-align: center;
+    }
+    .Cell
+    {
+        display: table-cell;
+        border: solid;
+        border-width: thin;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+

@@ -1,0 +1,38 @@
+<div class="tableWrapper" >
+  <div class="flex-box">
+    <button [routerLink]="['/products/admin']"> Back </button>
+  </div>
+  <div class="search-hero">
+    <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;Search by First Name">
+  </div>
+  <table class="tableWrapper">
+    <thead>
+      <tr>
+        <th >User Name</th>
+        <th >First</th>
+        <th >Last Name</th>
+        <th>Email </th>
+        <th> User Role </th>
+        <th ></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of Users | filter:searchText">
+        <td> {{user.UserName}} </td>
+        <td> {{user.FirstName}} </td>
+        <td> {{user.LastName}} </td>
+        <td> {{user.Email}} </td>
+        <td> {{user.UserRole}} </td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+      <button  (click)="decCount()" (click) = "this.getUserPage(this.pager.toString())" class="btn btn-default form-control increaseBtn">Previous</button>
+      <button  (click)="pagebutton1()" (click) = "this.getUserData(this.pager.toString())" class="btn btn-default form-control increaseBtn">{{this.pagenumber}}
+        </button>
+      <button  (click)="pagebutton2()" (click) = "this.getUserData(this.pager.toString())" class="btn btn-default form-control increaseBtn">{{this.pagenumber+1}}</button>
+      <button  (click)="pagebutton3()" (click) = "this.getUserData(this.pager.toString())" class="btn btn-default form-control increaseBtn">{{this.pagenumber+2}}</button>
+      <button  (click)="incCount()" (click) = "this.getUserPage(this.pager.toString())"  class="btn btn-default form-control increaseBtn">Next</button>
+      <h5>The current page is {{this.pager+1}}</h5>
+  </div>
+</div>
