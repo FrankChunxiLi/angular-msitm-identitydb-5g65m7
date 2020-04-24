@@ -61,7 +61,7 @@ export class HardwareListComponent implements OnInit {
     
   }
 
-  public pagebutton1(){
+   public pagebutton1(){
     if(this.pager < 1){this.pagenumber = 1;
     console.log(this.pager)}
 
@@ -101,6 +101,7 @@ export class HardwareListComponent implements OnInit {
       this.pagenumber=this.pagenumber+1
     }
   }
+
 
   public getData(page?: string) {
     this._dbService.getData(page)
